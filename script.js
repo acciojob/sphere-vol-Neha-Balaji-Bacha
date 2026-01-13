@@ -2,11 +2,14 @@ const radius = document.querySelector("#radius");
 const volume = documnet.querSelector("#volume");
 let result;
 function volume_sphere() {
-    let r = radius.value;
-	if(r >= 0 && (!isNaN)){
-		result = Math.round((Math.floor(4/3)) / 3.14 * Math.pow(r,3));
+    let r = Number(radius.value);
+	if(r < 0 && isNaN(r){
+		result = NaN;
 	}
-   return result;
+    else{
+		result = ((4/3) * Math.PI * Math.pow(r,3).toFixed(4));
+	}
+	volume.value = result;
 } 
 
 window.onload = document.getElementById('MyForm').onsubmit = volume_sphere;
