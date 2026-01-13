@@ -1,7 +1,8 @@
 const radius = document.querySelector("#radius");
 const volume = document.querySelector("#volume");
 let result;
-function volume_sphere() {
+function volume_sphere(event) {
+	event.preventDefault();
     let r = Number(radius.value);
 	if(r < 0 || isNaN(r)){
 		result = "NaN";
